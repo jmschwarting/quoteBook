@@ -10,7 +10,7 @@ quoteBook
 
 
 ###Step 1: Set up your Structure
-The first step whenever you're setting up an Angular App is to set up your foundation then check if your controller is tied to the view as it should be. 
+The first step whenever you're setting up an Angular App is to set up your foundation then check if your controller is tied to the view as it should be.
 * Create an index.html and a style.css file
 * Create a folder called js
 * In the js folder, create an app.js, dataService.js, and a mainCtrl.js file
@@ -30,8 +30,8 @@ app.controller('mainCtrl', function($scope){
 ```
 Once again note we're 'getting' the quoteBook module rather than 'setting' ([]) it. Also, it's really important to remember that whenever you add a js file, you need to include those in your index.html file as scripts. 
 * In your index.html file before the body tag closes include script tags which link to all your Angular files in the 'js' folder.
-* Now that your app and controller are set up and they're linked in your html page, add a test property to your scope object in your controller then verify that it works {{test}} in your html page. 
-* If you see whatever text you entered into $scope.test in your view, continue to the next step. If not, check your console for any errors. 
+* Now that your app and controller are set up and they're linked in your html page, add a test property to your scope object in your controller then verify that it works {{test}} in your html page.
+* If you see whatever text you entered into $scope.test in your view, continue to the next step. If not, check your console for any errors.
 
 
 ###Step 2: Set up your Angular Service
@@ -65,11 +65,29 @@ Now that your service is set up, let's inject your service in to your controller
 * Once the quotes data is on your scope, use ng-repeat to loop over that data in  your index.html page and display it.
 
 ##Step 4: Add Options to Filter, Add, and Remove Items from your Quotes Array
+
 * Create three buttons, Add Quote, Remove Quote, and Filter Quotes
+
 * Using ng-click and the methods we set up on our dataService object earlier, make those three buttons do the appropriate action.
+
+  - Add
+  - Remove
+  - Filter
+
+
+
+
 * Once you've finished, add some ng-shows to 'toggle' the input boxes for add, remove, and filter making sure you only show one at a time.
 
-##Step 5: Persist your Quotes as a cookie in your browser
-* Look up how to use $cookieStore and the $cookieStore API - https://docs.angularjs.org/api/ngCookies/service/$cookieStore
-* Now instead of just pushing or splicing your quotes out of the array, use $cookieStore to persist that data as a cookie in your browser.
 
+
+
+
+
+
+
+##Step 5: Persist your Quotes as a cookie in your browser
+
+* Look up how to use $cookieStore and the $cookieStore API - https://docs.angularjs.org/api/ngCookies/service/$cookieStore
+
+* Now instead of just pushing or splicing your quotes out of the array, use $cookieStore to persist that data as a cookie in your browser.

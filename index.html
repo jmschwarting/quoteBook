@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="quoteBook">
+<head>
+	<title>User Profiles</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ng-controller="mainCtrl">
+
+
+<input ng-model="inputField"/>
+<button ng-click="addQuote()">Add Quote</button>
+<button ng-click="deleteQuote()">Remove Quote</button>
+<button ng-click="filterQuotes()">Filter Quotes</button>
+
+
+
+<h1>Quotes, Homeboy</h1>
+<ul ng-repeat="quote in quotes | filter: filterBy">
+	<li>{{quote.text + ' -- ' + quote.author}}</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"></script>
+<script src="app.js"></script>
+<script src="mainCtrl.js"></script>
+<script src="dataService.js"></script>
+</body>
+
+</html>
